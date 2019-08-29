@@ -7,7 +7,7 @@ const actionSchema = new Schema({
   description: { type: String, required: true },
   objectif: { type: String, required: true },
   date: { type: Date, required: true },
-  Statut:{type: Boolean },
+  statut:{type: Boolean, required: true },
 }, {
   timestamps: true,
 });

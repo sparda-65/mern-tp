@@ -13,7 +13,8 @@ router.route('/add').post((req, res) => {
   const objectif = String(req.body.objectif);
   const date = Date.parse(req.body.date);
   const statut= Boolean(req.body.statut);
-
+  console.log(date);
+  console.log(statut);
   const newaction = new Action({
     username,
     description,

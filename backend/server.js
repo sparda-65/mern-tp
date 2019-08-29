@@ -24,10 +24,10 @@ const usersRouter = require('./routes/users');
 app.use('/actions', actionsRouter);
 app.use('/users', usersRouter);
 
-// app.get('/',(req, res)=>{
+app.get('/',(req, res)=>{
 
-//     res.send('hello !!')
-// })
+    res.send('hello !!')
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
