@@ -24,7 +24,7 @@ router.route('/add').post((req, res) => {
   });
 
   newaction.save()
-  .then(() => res.json('Action added!'))
+  .then(() => res.json('Action added!'+newaction))
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -45,9 +45,9 @@ router.route('/update/:id').post((req, res) => {
     .then(action => {
       action.username = req.body.username;
       action.description = req.body.description;
-      action.objectif = Number(req.body.objectif);
+      action.objectif = String(req.body.objectif);
       action.date = Date.parse(req.body.date);
-
+      action.statut= Boolean(req.body.statut);
       action.save()
         .then(() => res.json('Action updated!'))
         .catch(err => res.status(400).json('Error: ' + err));
