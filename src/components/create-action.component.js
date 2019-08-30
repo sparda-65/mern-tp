@@ -20,7 +20,7 @@ export default class CreateAction extends Component{
         this.state = {
           username: '',
           description: '',
-          objectif: 0,
+          objectif: '',
           date: new Date(),
           statut: Boolean,
           users: []
@@ -28,10 +28,10 @@ export default class CreateAction extends Component{
       }
 
       componentDidMount(){
-        this.setState = {
+        this.setState({
             username: 'test user',
             users: ['test1']
-          }
+          })
 
       }
 
