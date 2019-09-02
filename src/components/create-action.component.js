@@ -22,18 +22,18 @@ export default class CreateAction extends Component{
           description: '',
           objectif: '',
           date: new Date(),
-          statut: Boolean,
+          statut: true,
           users: []
         }
-      }
+    }
 
-      componentDidMount(){
+    componentDidMount(){
         this.setState({
             username: 'test user',
             users: ['test1']
           })
 
-      }
+    }
 
     onChangeUsername(e){
         this.setState({
@@ -61,7 +61,7 @@ export default class CreateAction extends Component{
 
     onChangeStatut(e){
         this.setState({
-            statut: e.target.value
+            statut: e.target.checked
         });
     }
 
@@ -130,11 +130,11 @@ export default class CreateAction extends Component{
                 </div>
                 </div>
                 <div className="form-group">
-                <label>Statut : </label>
+                <label>Statut: </label>
                 <input 
-                    type="text"
+                    type="checkbox"
                     className="form-control"
-                    value={this.state.statut}
+                    checked={this.state.statut}
                     onChange={this.onChangeStatut}
                     />
                 </div>
